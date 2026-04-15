@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.search-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.search-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px 20px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+.weather-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .weather-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.current-weather {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.date {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.weather-main {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.weather-description {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-top: 10px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 12px;
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+  color: #667eea;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.forecast {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.forecast-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.forecast-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.forecast-card {
+  text-align: center;
+  padding: 20px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.forecast-date {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+}
+
+.forecast-temp {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.forecast-desc {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-top: 5px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 20px 0;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --text-color: #f0f4ff;
+  --accent-color: #ffd369;
+}
+
+
+#clothingSuggestion {
+  margin-top: 30px;
+  padding: 20px 25px;
+  background: #4a69bd; /* solid, rich blue background for good contrast */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(74, 105, 189, 0.6);
+  color: #f0f4ff; /* light text for contrast */
+  font-weight: 700;
+  font-size: 1.15rem;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  user-select: none;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#clothingSuggestion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(74, 105, 189, 0.8);
+}
+
+#clothingSuggestion .icon {
+  flex-shrink: 0;
+  font-size: 3rem;
+  color: #ffd369; /* warm accent color */
+  filter: drop-shadow(0 0 4px rgba(255, 211, 105, 0.7));
+}
+
+#clothingSuggestion .suggestion-text {
+  flex: 1;
+  line-height: 1.4;
+  color: #f0f4ff;
+}
+
+#clothingSuggestion .suggestion-text strong {
+  color: #ffeaa7; /* lighter accent for highlights */
+  font-weight: 800;
+}
+
+#clothingSuggestion .info-icon {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  color: #ffeaa7;
+  cursor: pointer;
+  position: relative;
+}
+
+#clothingSuggestion .info-tooltip {
+  position: absolute;
+  bottom: 110%;
+  right: 0;
+  background: #2c3e50; /* dark background for tooltip */
+  border-radius: 12px;
+  padding: 12px 18px;
+  width: 280px;
+  font-size: 0.9rem;
+  color: #f0f4ff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+#clothingSuggestion .info-icon:hover .info-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
