@@ -7,7 +7,7 @@ const currentWeatherElement = document.getElementById('currentWeather');
 const forecastElement = document.getElementById('forecast');
 
 // API Configuration (Replace with your own API key)
-const API_KEY = '7390cbe2aa941303c8163fbe660fd4f3'; // Your OpenWeatherMap API key
+const API_KEY = '#'; // Your OpenWeatherMap API key
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // Clothing suggestions data
