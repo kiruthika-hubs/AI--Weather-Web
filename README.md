@@ -5,11 +5,11 @@ A simple weather application that provides **real-time weather updates** and a *
 
 ---
 
-## 🚀 Features
-- 🌍 Real-time weather data
-- 📅 5-day forecast
-- 🤖 Smart clothing suggestions
-- 📱 Clean and responsive design
+##  Features
+-  Real-time weather data
+-  5-day forecast
+-  Smart clothing suggestions
+-  Clean and responsive design
 
 ---
 
